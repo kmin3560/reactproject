@@ -12,6 +12,13 @@ const usersController = {
       data: userInfo,
     });
   },
+  uploadImage: (req, res) => {
+    const imageInfo = req.file;
+    res.status(200).json({
+      message: "업로드 완료",
+      data: imageInfo,
+    });
+  },
 };
 
 module.exports = usersController;
